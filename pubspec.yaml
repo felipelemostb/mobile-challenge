@@ -47,6 +47,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  dio: ^4.0.6
+  sqflite: ^2.2.2
+  lottie: ^2.1.0
+  loading_animation_widget: ^1.2.0+4
+  flutter_secure_storage: ^4.2.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
