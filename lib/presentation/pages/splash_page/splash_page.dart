@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
       ((value) {
         AppNavigation.navigateToNamed(
           context,
-          "/homePage",
+          "/fowardPage",
           NavigationType.pushNamedAndRemoveUntil,
         );
       }),
