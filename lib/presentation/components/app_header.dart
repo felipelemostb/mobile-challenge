@@ -19,7 +19,7 @@ class AppHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     num screenPerimeter = DeviceScreenInformation.perimeter(context);
     return Scaffold(
-      backgroundColor: AppTheme.colors.primaryColor,
+      backgroundColor: AppTheme.colors.white,
       resizeToAvoidBottomInset: true,
       appBar: AppBar(
         centerTitle: true,
@@ -98,9 +98,9 @@ class AppHeader extends StatelessWidget {
                               child: Text(
                                 "Leave app",
                                 style: AppTheme.textStyles.styleText(
-                                  TypeFont.light,
-                                  AppTheme.colors.black,
-                                  screenPerimeter * 0.007,
+                                  TypeFont.normal,
+                                  AppTheme.colors.primaryColor,
+                                  screenPerimeter * 0.008,
                                   FontWeight.w400,
                                 ),
                               ),
@@ -113,10 +113,10 @@ class AppHeader extends StatelessWidget {
                               child: Text(
                                 "Cancel",
                                 style: AppTheme.textStyles.styleText(
-                                  TypeFont.light,
+                                  TypeFont.normal,
                                   AppTheme.colors.black,
-                                  screenPerimeter * 0.007,
-                                  FontWeight.w600,
+                                  screenPerimeter * 0.008,
+                                  FontWeight.w700,
                                 ),
                               ),
                             ),
