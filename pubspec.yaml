@@ -15,7 +15,6 @@ dependencies:
 
   flutter_lints: ^2.0.0
   dio: ^4.0.6
-  sqflite: ^2.2.2
   lottie: ^2.1.0
   loading_animation_widget: ^1.2.0+4
   flutter_secure_storage: ^4.2.1
@@ -29,6 +28,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  shimmer: ^2.0.0
 
 
 

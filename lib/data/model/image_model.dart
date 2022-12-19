@@ -22,7 +22,7 @@ class ImageModel {
     return ImageModel(
       file: map["file"] ?? "",
       url: map["url"] ??
-          "https://img.freepik.com/fotos-gratis/variedade-plana-com-deliciosa-comida-brasileira_23-2148739179.jpg?w=2000",
+          "https://www.linguahouse.com/linguafiles/md5/d01dfa8621f83289155a3be0970fb0cb",
     );
   }
 

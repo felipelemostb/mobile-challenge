@@ -52,30 +52,58 @@ class RestaurantCardWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(15),
               color: AppTheme.colors.white,
             ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: AppTheme.colors.white.withOpacity(0.8),
-                    borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(40),
-                    ),
-                  ),
-                  width: MediaQuery.of(context).size.width * 0.60,
-                  height: MediaQuery.of(context).size.height * 0.05,
-                  child: Center(
-                    child: Text(
-                      name,
-                      style: AppTheme.textStyles.styleText(
-                        TypeFont.normal,
-                        AppTheme.colors.black,
-                        screenPerimeter * 0.0068,
-                        FontWeight.w700,
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: AppTheme.colors.white.withOpacity(0.8),
+                        borderRadius: const BorderRadius.only(
+                          topRight: Radius.circular(40),
+                        ),
+                      ),
+                      width: MediaQuery.of(context).size.width * 0.60,
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      child: Center(
+                        child: Text(
+                          name,
+                          style: AppTheme.textStyles.styleText(
+                            TypeFont.normal,
+                            AppTheme.colors.black,
+                            screenPerimeter * 0.0068,
+                            FontWeight.w700,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                )
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: GestureDetector(
+                        onTap: iconTap,
+                        child: Column(
+                          children: [
+                            CircleAvatar(
+                              radius: screenPerimeter * 0.010,
+                              backgroundColor: AppTheme.colors.primaryColor,
+                              child: Center(
+                                child: Icon(
+                                  Icons.star,
+                                  color:
+                                      isSelected ? Colors.yellow : Colors.white,
+                                  size: screenPerimeter * 0.010,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ],
             ),
           ),

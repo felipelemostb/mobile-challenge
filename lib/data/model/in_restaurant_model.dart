@@ -14,7 +14,7 @@ class InRestaurantModel {
   Map<String, dynamic> toMap() {
     return {
       "accepted": accepted,
-      "cards": cards,
+      "cards": cards.toMap(),
     };
   }
 
