@@ -22,6 +22,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
     favorites = (box.read('favoritesJson') as List).map((e) {
       return DocsModel.fromMap(e);
     }).toList();
+    favorites;
     super.didChangeDependencies();
   }
 

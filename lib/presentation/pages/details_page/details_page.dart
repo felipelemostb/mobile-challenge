@@ -26,21 +26,29 @@ class _DetailsPageState extends State<DetailsPage>
   List<Map> favoritesJson = [];
 
   void toggleFavorite() {
-    final id = restaurants.id;
-    bool containsid = favorites.where((element) => element == id).isNotEmpty;
+    bool containsid =
+        favorites.where((element) => element == restaurants.id).isNotEmpty;
     if (containsid) {
       favorites.remove(restaurants.id);
-      favoritesJson.remove(restaurants.toMap());
       isFavorite = false;
+      favoritesJson.removeWhere(
+        ((element) {
+          return element['_id'] == restaurants.id;
+        }),
+      );
+      favoritesJson;
       box.write('favorites', favorites);
+
       box.write('favoritesJson', favoritesJson);
     } else {
       favorites.add(restaurants.id);
       isFavorite = true;
       favoritesJson.add(restaurants.toMap());
+      favoritesJson;
       box.write('favorites', favorites);
       box.write('favoritesJson', favoritesJson);
     }
+
     setState(() {});
   }
 
@@ -53,13 +61,14 @@ class _DetailsPageState extends State<DetailsPage>
   @override
   void didChangeDependencies() {
     final args = ModalRoute.of(context)!.settings.arguments as DocsModel;
+    favoritesJson = List<Map>.from(box.read('favoritesJson') ?? []);
     restaurants = args;
     getFavorites();
     super.didChangeDependencies();
   }
 
   getFavorites() {
-    favorites = List<String>.from(box.read('favorites'));
+    favorites = List<String>.from(box.read('favorites') ?? []);
     isFavorite =
         favorites.where((element) => element == restaurants.id).isNotEmpty;
     setState(() {});
