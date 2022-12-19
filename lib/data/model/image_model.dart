@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 class ImageModel {
-  String file;
-  String url;
+  String? file;
+  String? url;
 
   ImageModel({
     required this.file,
@@ -21,7 +21,8 @@ class ImageModel {
   factory ImageModel.fromMap(Map<String, dynamic> map) {
     return ImageModel(
       file: map["file"] ?? "",
-      url: map["url"] ?? "",
+      url: map["url"] ??
+          "https://img.freepik.com/fotos-gratis/variedade-plana-com-deliciosa-comida-brasileira_23-2148739179.jpg?w=2000",
     );
   }
 

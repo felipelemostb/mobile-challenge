@@ -1,5 +1,7 @@
 import 'dart:convert';
 
+import 'package:mobile_challenge/data/model/cuisines_model.dart';
+
 import 'address_info_model.dart';
 import 'contacts_model.dart';
 import 'currency_info_model.dart';
@@ -17,7 +19,7 @@ class DocsModel {
   ContactsModel contacts;
   LocationModel location;
   ImageModel image;
-  List<dynamic> cuisines;
+  List<CuisinesModel> cuisines;
   List<dynamic> additionalInfo;
   String id;
   String name;
@@ -102,7 +104,9 @@ class DocsModel {
       contacts: ContactsModel.fromMap(map["contacts"] ?? <String, dynamic>{}),
       location: LocationModel.fromMap(map["location"] ?? <String, dynamic>{}),
       image: ImageModel.fromMap(map["image"] ?? <String, dynamic>{}),
-      cuisines: List<dynamic>.from(map["cuisines"] ?? <dynamic>[]),
+      cuisines: List.from(map["cuisines"] ?? <dynamic>[])
+          .map((e) => CuisinesModel.fromMap(e))
+          .toList(),
       additionalInfo: List<dynamic>.from(map["additionalInfo"] ?? <dynamic>[]),
       id: map["_id"] ?? "",
       name: map["name"] ?? "",

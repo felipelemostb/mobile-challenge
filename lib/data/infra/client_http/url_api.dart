@@ -1,3 +1,3 @@
 class UrlApi {
-  static const getRestaurants = "https://api.dev.wdtek.xyz/restaurants";
+  static const getRestaurants = "https://api.dev.wdtek.xyz/restaurants/";
 }

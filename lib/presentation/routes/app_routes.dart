@@ -9,7 +9,9 @@ class RoutesName {
   static Map<String, Widget Function(BuildContext)> routesName(
       DependencyInjector dependencyInjector) {
     return {
-      "/homePage": (context) => const HomePage(),
+      "/homePage": (context) => HomePage(
+            dependencyInjector: dependencyInjector,
+          ),
       "/detailsPage": (context) => const DetailsPage(),
       "/splashPage": (context) => const SplashPage(),
       "/fowardPage": (context) => const FowardPage(),

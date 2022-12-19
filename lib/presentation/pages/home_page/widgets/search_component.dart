@@ -22,23 +22,22 @@ class _SearchComponentState extends State<SearchComponent> {
         child: TextField(
           decoration: InputDecoration(
             filled: true,
-            fillColor: AppTheme.colors.primaryColor,
+            fillColor: AppTheme.colors.white,
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(
-                10,
-              ),
-              borderSide: BorderSide.none,
-            ),
+                borderRadius: BorderRadius.circular(
+                  10,
+                ),
+                borderSide: BorderSide(color: AppTheme.colors.primaryColor)),
             hintText: "Ex: Pizza, hamburguer, sushi",
             hintStyle: TextStyle(
               fontSize: screenPerimeter * 0.006,
               color: AppTheme.colors.black,
             ),
-            prefixIcon: Icon(
+            suffixIcon: Icon(
               Icons.search,
-              size: screenPerimeter * 0.008,
+              size: screenPerimeter * 0.010,
             ),
-            prefixIconColor: AppTheme.colors.black,
+            suffixIconColor: AppTheme.colors.primaryColor,
           ),
         ),
       ),

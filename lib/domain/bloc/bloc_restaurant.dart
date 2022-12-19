@@ -1,24 +1,17 @@
 import 'dart:async';
 
-import 'package:mobile_challenge/core/utils/request_data_utils.dart';
+import 'package:mobile_challenge/data/model/docs_model.dart';
 import 'package:mobile_challenge/domain/use_case/restaurant_use_case.dart';
 
-enum GetRestaurantsStatus { loading, failed, success }
-
-class BlocRestaurantPage {
+class RestaurantController {
   late final RestaurantUseCase _restaurantUseCase;
-  BlocRestaurantPage(this._restaurantUseCase);
+  RestaurantController(this._restaurantUseCase);
 
-  StreamController<GetRestaurantsStatus> getRestaurantsStreamController =
-      StreamController<GetRestaurantsStatus>.broadcast();
-
-  void fechLocations(RequestDataUtils requestDataUtils) async {
+  Future<List<DocsModel>> fetchDocs(int offset) async {
     try {
-      getRestaurantsStreamController.add(GetRestaurantsStatus.loading);
-      await _restaurantUseCase.fetchRestaurants(requestDataUtils);
-      getRestaurantsStreamController.add(GetRestaurantsStatus.success);
+      final response = await _restaurantUseCase.fetchRestaurants(offset);
+      return response;
     } catch (e) {
-      getRestaurantsStreamController.add(GetRestaurantsStatus.failed);
       rethrow;
     }
   }
