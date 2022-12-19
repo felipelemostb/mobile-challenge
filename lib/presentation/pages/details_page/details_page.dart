@@ -20,19 +20,27 @@ class _DetailsPageState extends State<DetailsPage>
   bool isFavorite = false;
   final box = GetStorage();
 
+  late DocsModel restaurants;
+  List<String> favorites = [];
+
+  List<Map> favoritesJson = [];
+
   void toggleFavorite() {
     final id = restaurants.id;
     bool containsid = favorites.where((element) => element == id).isNotEmpty;
     if (containsid) {
-      favorites.remove(id);
+      favorites.remove(restaurants.id);
+      favoritesJson.remove(restaurants.toMap());
       isFavorite = false;
       box.write('favorites', favorites);
+      box.write('favoritesJson', favoritesJson);
     } else {
-      favorites.add(id);
+      favorites.add(restaurants.id);
       isFavorite = true;
+      favoritesJson.add(restaurants.toMap());
       box.write('favorites', favorites);
+      box.write('favoritesJson', favoritesJson);
     }
-    print(isFavorite);
     setState(() {});
   }
 
@@ -41,9 +49,6 @@ class _DetailsPageState extends State<DetailsPage>
     _controller = TabController(length: 3, vsync: this, initialIndex: 0);
     super.initState();
   }
-
-  late DocsModel restaurants;
-  List<String> favorites = [];
 
   @override
   void didChangeDependencies() {
@@ -94,11 +99,13 @@ class _DetailsPageState extends State<DetailsPage>
                             Navigator.pop(context);
                           },
                           child: CircleAvatar(
+                            radius: screenPerimeter * 0.008,
                             backgroundColor: AppTheme.colors.white,
                             child: Center(
                               child: Icon(
                                 Icons.arrow_back_ios,
                                 color: AppTheme.colors.black,
+                                size: screenPerimeter * 0.008,
                               ),
                             ),
                           ),
@@ -130,20 +137,21 @@ class _DetailsPageState extends State<DetailsPage>
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          restaurants.name,
-                          style: AppTheme.textStyles.styleText(
-                            TypeFont.normal,
-                            AppTheme.colors.black,
-                            screenPerimeter * 0.009,
-                            FontWeight.w700,
+                        Expanded(
+                          child: Text(
+                            restaurants.name,
+                            maxLines: 2,
+                            style: AppTheme.textStyles.styleText(
+                              TypeFont.normal,
+                              AppTheme.colors.black,
+                              screenPerimeter * 0.007,
+                              FontWeight.w700,
+                            ),
                           ),
                         ),
                         GestureDetector(
                           onTap: () {
-                            setState(() {
-                              toggleFavorite();
-                            });
+                            toggleFavorite();
                           },
                           child: Column(
                             children: [
@@ -242,32 +250,35 @@ class _DetailsPageState extends State<DetailsPage>
                                         ),
                                       ),
                                       const SizedBox(height: 10),
-                                      Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                              horizontal: 15.0,
-                                            ),
-                                            child: Text(
-                                              overflow: TextOverflow.ellipsis,
-                                              restaurants.addressInfo.address,
-                                              style:
-                                                  AppTheme.textStyles.styleText(
-                                                TypeFont.light,
-                                                AppTheme.colors.black,
-                                                screenPerimeter * 0.0068,
-                                                FontWeight.w500,
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 15.0),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          children: [
+                                            Expanded(
+                                              child: Text(
+                                                maxLines: 2,
+                                                overflow: TextOverflow.ellipsis,
+                                                restaurants.addressInfo.address,
+                                                style: AppTheme.textStyles
+                                                    .styleText(
+                                                  TypeFont.light,
+                                                  AppTheme.colors.black,
+                                                  screenPerimeter * 0.0068,
+                                                  FontWeight.w500,
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                          Icon(
-                                            Icons.location_pin,
-                                            color: AppTheme.colors.primaryColor,
-                                            size: screenPerimeter * 0.012,
-                                          )
-                                        ],
+                                            Icon(
+                                              Icons.location_pin,
+                                              color:
+                                                  AppTheme.colors.primaryColor,
+                                              size: screenPerimeter * 0.012,
+                                            )
+                                          ],
+                                        ),
                                       ),
                                       const SizedBox(height: 20),
                                       Padding(
@@ -486,7 +497,7 @@ class _DetailsPageState extends State<DetailsPage>
                                               horizontal: 15.0,
                                             ),
                                             child: Text(
-                                              nameCuisines.name,
+                                              nameCuisines.name.en,
                                               style:
                                                   AppTheme.textStyles.styleText(
                                                 TypeFont.normal,

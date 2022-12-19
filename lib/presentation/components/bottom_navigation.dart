@@ -28,7 +28,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     },
     {
       "name": 'FAVORITES',
-      "route": "/detailsPage",
+      "route": "/favoritesPage",
       "index": 1,
       "icon": const ImageIcon(
         AssetImage("assets/icons/hearth.png"),

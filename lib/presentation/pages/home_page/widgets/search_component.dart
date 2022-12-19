@@ -21,14 +21,25 @@ class _SearchComponentState extends State<SearchComponent> {
         height: MediaQuery.of(context).size.height * 0.10,
         child: TextField(
           decoration: InputDecoration(
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(
+                10,
+              ),
+              borderSide: BorderSide(
+                color: AppTheme.colors.primaryColor,
+              ),
+            ),
             filled: true,
             fillColor: AppTheme.colors.white,
             border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(
-                  10,
-                ),
-                borderSide: BorderSide(color: AppTheme.colors.primaryColor)),
-            hintText: "Ex: Pizza, hamburguer, sushi",
+              borderRadius: BorderRadius.circular(
+                10,
+              ),
+              borderSide: BorderSide(
+                color: AppTheme.colors.primaryColor,
+              ),
+            ),
+            hintText: "Find the best place...",
             hintStyle: TextStyle(
               fontSize: screenPerimeter * 0.006,
               color: AppTheme.colors.black,

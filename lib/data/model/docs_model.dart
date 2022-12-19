@@ -71,7 +71,7 @@ class DocsModel {
       "contacts": contacts.toMap(),
       "location": location.toMap(),
       "Image": image.toMap(),
-      "cuisines": cuisines,
+      "cuisines": cuisines.map((e) => e.toMap()),
       "additionalInfo": additionalInfo,
       "_id": id,
       "name": name,
@@ -89,8 +89,6 @@ class DocsModel {
       "countryCode": countryCode,
     };
   }
-
-  String toJson() => jsonEncode(toMap());
 
   factory DocsModel.fromMap(Map<String, dynamic> map) {
     return DocsModel(

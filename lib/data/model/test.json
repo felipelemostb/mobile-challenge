@@ -1,0 +1,1205 @@
+{
+  "docs": [
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "enabled": true,
+          "scheduleAheadMinutes": 4320,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3
+              ],
+              "_id": "5fce6783a119f0a04a51778c",
+              "start": "11:00",
+              "end": "15:00",
+              "sizeMinutes": 30
+            }
+          ],
+          "zones": [
+            {
+              "_id": "5fce6783a119f0db0551778b",
+              "maxDistanceRadius": 39000,
+              "deliveryCost": 1,
+              "avgDeliveryTimeMinutes": 16
+            }
+          ]
+        },
+        "takeaway": {
+          "enabled": true,
+          "scheduleAheadMinutes": 2880,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                2
+              ],
+              "_id": "5fce6783a119f0414a51778a",
+              "start": "11:00",
+              "end": "15:00",
+              "sizeMinutes": 30
+            }
+          ]
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Rua da Costa, N300, Porto",
+        "city": "Gaia",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "dasd@gmail.com",
+        "phoneNumber": "24423232323"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.137020111083986,
+          38.70845229978765
+        ]
+      },
+      "image": {
+        "file": "5ebd79ea7dd83e712eebd892.jpg",
+        "url": "https://cdn.dev.wdtek.xyz/5ea884ff432c0893e5d4de33/restaurants/5ebd79ea7dd83e712eebd892.jpg"
+      },
+      "cuisines": [],
+      "additionalInfo": [],
+      "_id": "5ebd79ea7dd83e712eebd892",
+      "name": "Atenas Snacks",
+      "company": "5ea884ff432c0893e5d4de33",
+      "capacity": 46,
+      "mealType": "Comida típica Grega",
+      "createdAt": "2020-05-14T17:03:38.776Z",
+      "updatedAt": "2020-12-07T17:33:55.545Z",
+      "__v": 0,
+      "currencyCode": "EUR",
+      "languageCode": "pt-PT",
+      "timezone": "Europe/Lisbon",
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "enabled": true,
+          "scheduleAheadMinutes": 4320,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "_id": "5fce6438a119f0c45e517764",
+              "start": "09:00",
+              "end": "12:00",
+              "sizeMinutes": 30
+            },
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "5fce6438a119f07e3d517765",
+              "start": "15:10",
+              "end": "19:00",
+              "sizeMinutes": 30
+            }
+          ],
+          "zones": [
+            {
+              "_id": "5fce6438a119f08331517762",
+              "maxDistanceRadius": 18000,
+              "deliveryCost": 3.8,
+              "avgDeliveryTimeMinutes": 55
+            },
+            {
+              "_id": "5fce6438a119f0737f517763",
+              "maxDistanceRadius": 11000,
+              "deliveryCost": 1.5,
+              "avgDeliveryTimeMinutes": 30
+            }
+          ]
+        },
+        "takeaway": {
+          "enabled": true,
+          "scheduleAheadMinutes": 2880,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1
+              ],
+              "_id": "5fce6438a119f0a849517761",
+              "start": "10:00",
+              "end": "19:30",
+              "sizeMinutes": 30
+            }
+          ]
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Rua de Souza 10, Braga2",
+        "city": "Braga",
+        "postalCode": "3434-343",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "guilherme.guerreiro@wedigitek.com",
+        "phoneNumber": "321312312"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.13633346557617,
+          38.7073788158805
+        ]
+      },
+      "image": {
+        "file": "5ebd7ae07dd83e0177ebd893.jpeg",
+        "url": "https://cdn.dev.wdtek.xyz/5ea884ff432c0893e5d4de33/restaurants/5ebd7ae07dd83e0177ebd893.jpeg"
+      },
+      "_id": "5ebd7ae07dd83e0177ebd893",
+      "name": "Restaurante Boa Mesa",
+      "company": "5ea884ff432c0893e5d4de33",
+      "capacity": 80,
+      "mealType": "Bistro",
+      "createdAt": "2020-05-14T17:07:44.324Z",
+      "updatedAt": "2022-01-18T11:01:33.519Z",
+      "__v": 0,
+      "currencyCode": "EUR",
+      "languageCode": "pt-PT",
+      "cuisines": [
+        {
+          "_id": "6092802e2e22443ca6135be9",
+          "name": {
+            "en": "Asian",
+            "pt-PT": "Asiático",
+            "pt-BR": "Asiático"
+          },
+          "tag": "cuisine"
+        }
+      ],
+      "timezone": "Europe/Lisbon",
+      "additionalInfo": [],
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "enabled": true,
+          "provider": "internal",
+          "maxDistanceRadius": 10000,
+          "avgDeliveryTimeMinutes": 30,
+          "scheduleAheadMinutes": 1440,
+          "schedules": [],
+          "zones": []
+        },
+        "takeaway": {
+          "schedules": []
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Rua da Boa Comida, 123",
+        "city": "Lisboa",
+        "postalCode": "1010-100",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "dasda@gmail.com",
+        "phoneNumber": "123123123"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.135646820068361,
+          38.70912314070077
+        ]
+      },
+      "image": {
+        "file": "5ec289f4a702587e06b8ba19.webp",
+        "url": "https://cdn.dev.wdtek.xyz/5ea884ff432c0893e5d4de33/restaurants/5ec289f4a702587e06b8ba19.webp"
+      },
+      "cuisines": [],
+      "additionalInfo": [],
+      "_id": "5ec289f4a702587e06b8ba19",
+      "name": "Restaurante Boa Comida",
+      "company": "5ea884ff432c0893e5d4de33",
+      "mealType": "Tradicional Portuguesa",
+      "createdAt": "2020-05-18T13:13:24.211Z",
+      "updatedAt": "2020-11-30T11:16:59.035Z",
+      "__v": 0,
+      "currencyCode": "EUR",
+      "languageCode": "pt-PT",
+      "capacity": 20,
+      "timezone": "Europe/Lisbon",
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "zones": [],
+          "schedules": []
+        },
+        "takeaway": {
+          "schedules": []
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "dasdasd",
+        "city": "Almada",
+        "postalCode": "2929-299",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "asdasd@gmail.com",
+        "phoneNumber": "222222"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.246110916137697,
+          38.72546686979455
+        ]
+      },
+      "_id": "5ed11fdc534dee1e922d939f",
+      "name": "CHURRASQUEIRA GOMES",
+      "company": "5ea884ff432c0893e5d4de33",
+      "languageCode": "pt-PT",
+      "currencyCode": "EUR",
+      "createdAt": "2020-05-29T14:44:44.055Z",
+      "updatedAt": "2021-07-13T12:25:38.825Z",
+      "__v": 0,
+      "timezone": "Europe/Lisbon",
+      "additionalInfo": [
+        "6092802e2e22443ca6135c45",
+        "6092802e2e22443ca6135c4b",
+        "6092802e2e22443ca6135c46"
+      ],
+      "cuisines": [
+        {
+          "_id": "6092802e2e22443ca6135be3",
+          "name": {
+            "en": "African",
+            "pt-PT": "Africana",
+            "pt-BR": "Africana"
+          },
+          "tag": "cuisine"
+        },
+        {
+          "_id": "6092802e2e22443ca6135be5",
+          "name": {
+            "en": "Alentejana",
+            "pt-PT": "Alentejana",
+            "pt-BR": "Alentejana"
+          },
+          "tag": "cuisine"
+        },
+        {
+          "_id": "6092802e2e22443ca6135bea",
+          "name": {
+            "en": "Austrian",
+            "pt-PT": "Austríaco",
+            "pt-BR": "Austríaco"
+          },
+          "tag": "cuisine"
+        }
+      ],
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "enabled": true,
+          "provider": "internal",
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "604104fbe79ffb8257c8e021",
+              "start": "11:00",
+              "end": "19:00",
+              "sizeMinutes": 30
+            }
+          ],
+          "zones": [
+            {
+              "_id": "604104fbe79ffb7286c8e01f",
+              "maxDistanceRadius": 100000,
+              "deliveryCost": 11,
+              "avgDeliveryTimeMinutes": 13
+            },
+            {
+              "_id": "604104fbe79ffb5d79c8e020",
+              "maxDistanceRadius": 6000,
+              "deliveryCost": 14,
+              "avgDeliveryTimeMinutes": 16
+            }
+          ]
+        },
+        "takeaway": {
+          "enabled": true,
+          "scheduleAheadMinutes": 1440,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "604104fbe79ffb1d2ec8e01e",
+              "start": "00:05",
+              "end": "22:00",
+              "sizeMinutes": 30
+            }
+          ]
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "A minha rua em Almada",
+        "city": "Almada",
+        "postalCode": "2828-888",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "guilherme.guerreiro@wedigitek.com",
+        "phoneNumber": "123123123"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.16740417480469,
+          38.674805562338
+        ]
+      },
+      "_id": "5ef3792d7892ee59780882ea",
+      "name": "Restaurante Toucinho de Céu",
+      "company": "5ea884ff432c0893e5d4de33",
+      "languageCode": "pt-PT",
+      "currencyCode": "EUR",
+      "mealType": "Grelhados",
+      "createdAt": "2020-06-24T16:02:53.077Z",
+      "updatedAt": "2021-08-23T14:01:56.437Z",
+      "__v": 0,
+      "capacity": 20,
+      "delivery": {
+        "loggi": {
+          "shopId": 5999
+        }
+      },
+      "timezone": "Europe/Lisbon",
+      "additionalInfo": [
+        "6092802e2e22443ca6135c4d"
+      ],
+      "cuisines": [
+        {
+          "_id": "6092802e2e22443ca6135bea",
+          "name": {
+            "en": "Austrian",
+            "pt-PT": "Austríaco",
+            "pt-BR": "Austríaco"
+          },
+          "tag": "cuisine"
+        }
+      ],
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "enabled": true,
+          "scheduleAheadMinutes": 1440,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4
+              ],
+              "_id": "6214b8e7ffbad2497a0ca076",
+              "start": "11:00",
+              "end": "15:00",
+              "sizeMinutes": 30
+            }
+          ],
+          "zones": [
+            {
+              "_id": "6214b8e7ffbad24c540ca074",
+              "maxDistanceRadius": 10000,
+              "deliveryCost": 2,
+              "avgDeliveryTimeMinutes": 20
+            },
+            {
+              "_id": "6214b8e7ffbad210760ca075",
+              "maxDistanceRadius": 27000,
+              "deliveryCost": 14,
+              "avgDeliveryTimeMinutes": 20
+            }
+          ]
+        },
+        "takeaway": {
+          "enabled": true,
+          "scheduleAheadMinutes": 4320,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                2
+              ],
+              "_id": "6214b8e7ffbad226510ca072",
+              "start": "09:00",
+              "end": "15:00",
+              "sizeMinutes": 30
+            },
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                2
+              ],
+              "_id": "6214b8e7ffbad29faa0ca073",
+              "start": "16:00",
+              "end": "20:00",
+              "sizeMinutes": 30
+            }
+          ]
+        },
+        "inRestaurantMenus": {
+          "enabled": true
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Rua Vila do Seixal, 34",
+        "city": "Almada",
+        "postalCode": "2800-222",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "dev@wedigitek.com",
+        "phoneNumber": "914770741"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.1612048,
+          38.6490796
+        ]
+      },
+      "image": {
+        "file": "5fa57fcb4e61d433cd1f8a33.webp",
+        "url": "https://cdn.dev.wdtek.xyz/5fa57ea24e61d445b51f8a31/restaurants/5fa57fcb4e61d433cd1f8a33.webp"
+      },
+      "_id": "5fa57fcb4e61d433cd1f8a33",
+      "languageCode": "pt-PT",
+      "currencyCode": "EUR",
+      "name": "Rice Me E Restaurante",
+      "company": "5fa57ea24e61d445b51f8a31",
+      "capacity": 60,
+      "mealType": "Rice grain, rice noodles, rice all ways",
+      "createdAt": "2020-11-06T16:54:35.685Z",
+      "updatedAt": "2022-02-22T15:35:44.983Z",
+      "__v": 0,
+      "timezone": "Europe/Lisbon",
+      "additionalInfo": [
+        "6092802e2e22443ca6135c4a",
+        "6092802e2e22443ca6135c4b"
+      ],
+      "cuisines": [
+        {
+          "_id": "6092802e2e22443ca6135be9",
+          "name": {
+            "en": "Asian",
+            "pt-PT": "Asiático",
+            "pt-BR": "Asiático"
+          },
+          "tag": "cuisine"
+        },
+        {
+          "_id": "6092802e2e22443ca6135beb",
+          "name": {
+            "en": "Author",
+            "pt-PT": "Autor",
+            "pt-BR": "Autor"
+          },
+          "tag": "cuisine"
+        },
+        {
+          "_id": "6092802e2e22443ca6135be7",
+          "name": {
+            "en": "Angolan",
+            "pt-PT": "Angolana",
+            "pt-BR": "Angolana"
+          },
+          "tag": "cuisine"
+        }
+      ],
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "zones": [],
+          "schedules": []
+        },
+        "takeaway": {
+          "schedules": []
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "customersQueue": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Av. António Augusto Aguiar 124, Lisboa",
+        "city": "Lisboa",
+        "postalCode": "1050-050",
+        "country": "Portugal"
+      },
+      "contacts": {
+        "email": "eat@riceme.pt",
+        "phoneNumber": "914770741"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -9.137020111083986,
+          38.71073247288019
+        ]
+      },
+      "image": {
+        "file": "5fa580fd4e61d421141f8a34.webp",
+        "url": "https://cdn.dev.wdtek.xyz/5fa57ea24e61d445b51f8a31/restaurants/5fa580fd4e61d421141f8a34.webp"
+      },
+      "_id": "5fa580fd4e61d421141f8a34",
+      "languageCode": "pt-PT",
+      "currencyCode": "EUR",
+      "name": "Rice Me Deli E Cafeteria & Bakery",
+      "company": "5fa57ea24e61d445b51f8a31",
+      "capacity": 40,
+      "mealType": " Cafetaria · Padaria",
+      "createdAt": "2020-11-06T16:59:41.869Z",
+      "updatedAt": "2022-02-22T11:25:33.610Z",
+      "__v": 0,
+      "timezone": "Europe/Lisbon",
+      "additionalInfo": [],
+      "cuisines": [
+        {
+          "_id": "6092802e2e22443ca6135bf2",
+          "name": {
+            "en": "Coffee",
+            "pt-PT": "Café",
+            "pt-BR": "Café"
+          },
+          "tag": "cuisine"
+        },
+        {
+          "_id": "6092802e2e22443ca6135c23",
+          "name": {
+            "en": "Bakery",
+            "pt-PT": "Padaria",
+            "pt-BR": "Padaria"
+          },
+          "tag": "cuisine"
+        }
+      ],
+      "languageInfo": "Portuguese (Portugal)",
+      "currencyInfo": {
+        "symbol": "€",
+        "name": "Euro",
+        "symbol_native": "€",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "EUR",
+        "name_plural": "euros"
+      },
+      "countryCode": "PT"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "schedules": [],
+          "zones": []
+        },
+        "takeaway": {
+          "schedules": []
+        },
+        "tableReservations": {
+          "enabled": true
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "delivery": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          },
+          "takeaway": {
+            "autoAcceptOrder": false,
+            "siteOptions": []
+          }
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Alameda Grajaú, 61 - Alphaville Industrial, Barueri - SP",
+        "city": "São Paulo",
+        "postalCode": "06454-050",
+        "country": "Brazil"
+      },
+      "contacts": {
+        "email": "test@outback.br",
+        "phoneNumber": "551141331955"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -46.63421630859375,
+          -23.550421438697416
+        ]
+      },
+      "image": {
+        "file": "5fc10b6c4e2318d7a791b9d9.webp",
+        "url": "https://cdn.dev.wdtek.xyz/5ea884ff432c0893e5d4de33/restaurants/5fc10b6c4e2318d7a791b9d9.webp"
+      },
+      "cuisines": [],
+      "additionalInfo": [],
+      "_id": "5fc10b6c4e2318d7a791b9d9",
+      "languageCode": "pt-BR",
+      "currencyCode": "BRL",
+      "name": "Outback Alphaville",
+      "company": "5ea884ff432c0893e5d4de33",
+      "capacity": 50,
+      "mealType": "Grill, Australiano",
+      "createdAt": "2020-11-27T14:21:32.973Z",
+      "updatedAt": "2021-01-04T09:27:07.868Z",
+      "__v": 0,
+      "timezone": "America/Sao_Paulo",
+      "languageInfo": "Portuguese (Brazil)",
+      "currencyInfo": {
+        "symbol": "R$",
+        "name": "Brazilian Real",
+        "symbol_native": "R$",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "BRL",
+        "name_plural": "Brazilian reals"
+      },
+      "countryCode": "BR"
+    },
+    {
+      "subscriptions": {
+        "wefood": true
+      },
+      "services": {
+        "delivery": {
+          "provider": "internal",
+          "enabled": false,
+          "schedules": [],
+          "zones": []
+        },
+        "takeaway": {
+          "enabled": false,
+          "schedules": [
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "61f16b7339f79f5e73fae4bc",
+              "start": "19:00",
+              "end": "01:00",
+              "sizeMinutes": 30
+            },
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "61f16b7339f79f4039fae4bd",
+              "start": "16:00",
+              "end": "20:00",
+              "sizeMinutes": 30
+            },
+            {
+              "repeatsOn": [
+                6,
+                5,
+                4,
+                3,
+                2
+              ],
+              "_id": "61f16b7339f79f43bcfae4be",
+              "start": "19:00",
+              "end": "01:00",
+              "sizeMinutes": 30
+            }
+          ]
+        },
+        "scango": {
+          "siteOptions": []
+        },
+        "inOfficeDelivery": {
+          "getNow": {
+            "enabled": true,
+            "autoAcceptOrder": false,
+            "serviceName": "imediata",
+            "serviceDescription": "Imediata",
+            "siteOptions": [
+              {
+                "options": [
+                  "REST"
+                ],
+                "freeInputOption": false,
+                "localDesignation": "Restaurante"
+              }
+            ]
+          },
+          "delivery": {
+            "enabled": false,
+            "autoAcceptOrder": false,
+            "siteOptions": [
+              {
+                "options": [
+                  "local 1",
+                  "local 2"
+                ],
+                "freeInputOption": false,
+                "localDesignation": "Retirada"
+              }
+            ]
+          },
+          "takeaway": {
+            "enabled": true,
+            "autoAcceptOrder": true,
+            "serviceName": "Levantamento do pedido",
+            "siteOptions": [
+              {
+                "options": [
+                  "Lanchonete"
+                ],
+                "freeInputOption": false,
+                "localDesignation": "Local de Entrega"
+              }
+            ]
+          }
+        },
+        "ingress": {
+          "opts": {
+            "badgeCode": {
+              "max": 1,
+              "min": 0
+            }
+          },
+          "enabled": true,
+          "algorithm": "alg_3"
+        }
+      },
+      "paymentsInfo": {
+        "inRestaurant": {
+          "cards": {
+            "method": [],
+            "authorizers": []
+          },
+          "accepted": []
+        }
+      },
+      "addressInfo": {
+        "address": "Avenida Albert Einstein, 627",
+        "city": "São Paulo",
+        "postalCode": "05652-900",
+        "country": "Brazil"
+      },
+      "contacts": {
+        "email": "guilherme.guerreiro@wedigitek.com",
+        "phoneNumber": "00000000"
+      },
+      "location": {
+        "type": "Point",
+        "coordinates": [
+          -46.7152614,
+          -23.5999636
+        ]
+      },
+      "_id": "61321cba52b4f07b6336de81",
+      "cuisines": [],
+      "additionalInfo": [],
+      "languageCode": "pt-BR",
+      "currencyCode": "BRL",
+      "name": "Albert Einstein",
+      "company": "61321c7b52b4f0c9db36de80",
+      "capacity": 100,
+      "timezone": "America/Sao_Paulo",
+      "createdAt": "2021-09-03T13:01:46.145Z",
+      "updatedAt": "2022-06-01T11:25:13.272Z",
+      "__v": 0,
+      "languageInfo": "Portuguese (Brazil)",
+      "currencyInfo": {
+        "symbol": "R$",
+        "name": "Brazilian Real",
+        "symbol_native": "R$",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "BRL",
+        "name_plural": "Brazilian reals"
+      },
+      "countryCode": "BR"
+    }
+  ],
+  "totalDocs": 9,
+  "offset": 0,
+  "limit": 10,
+  "totalPages": 1,
+  "page": 1,
+  "pagingCounter": 1,
+  "hasPrevPage": false,
+  "hasNextPage": false,
+  "prevPage": null,
+  "nextPage": null
+}

@@ -1,9 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+
 import 'dart:convert';
+
+import 'package:mobile_challenge/data/model/name.dart';
 
 class CuisinesModel {
   final String? id;
-  final String name;
+  final Name name;
   final String tag;
   CuisinesModel({
     required this.id,
@@ -14,15 +17,15 @@ class CuisinesModel {
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'id': id,
-      'name': name,
+      'name': name.toMap(),
       'tag': tag,
     };
   }
 
   factory CuisinesModel.fromMap(Map<String, dynamic> map) {
     return CuisinesModel(
-      id: map['_id'] as String,
-      name: map['name']['en'] as String,
+      id: map['id'] != null ? map['id'] as String : null,
+      name: Name.fromMap(map['name'] as Map<String, dynamic>),
       tag: map['tag'] as String,
     );
   }

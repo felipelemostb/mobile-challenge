@@ -53,17 +53,23 @@ class _HomePageState extends State<HomePage> {
   }
 
   List<String> favorites = [];
+  List<Map> favoritesJson = [];
 
-  void toggleFavorite(String id) {
-    bool containsid = favorites.where((element) => element == id).isNotEmpty;
+  void toggleFavorite(DocsModel doc) {
+    bool containsid =
+        favorites.where((element) => element == doc.id).isNotEmpty;
     if (containsid) {
-      favorites.remove(id);
+      favorites.remove(doc.id);
+      favoritesJson.remove(doc.toMap());
       box.write('favorites', favorites);
+      box.write('favoritesJson', favoritesJson);
     } else {
-      favorites.add(id);
+      favorites.add(doc.id);
+      favoritesJson.add(doc.toMap());
       box.write('favorites', favorites);
+      box.write('favoritesJson', favoritesJson);
     }
-    print(favorites);
+
     setState(() {});
   }
 
@@ -83,7 +89,7 @@ class _HomePageState extends State<HomePage> {
         offset += 3;
       });
     } catch (e) {
-      print(e);
+      rethrow;
     }
   }
 
@@ -139,7 +145,25 @@ class _HomePageState extends State<HomePage> {
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.05),
               const SearchComponent(),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Popular restaurants',
+                      style: AppTheme.textStyles.styleText(
+                        TypeFont.normal,
+                        AppTheme.colors.black,
+                        screenPerimeter * 0.008,
+                        FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
@@ -155,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                     image: data.image.url ?? "assets/images/card.jpeg",
                     isSelected: isSelected,
                     iconTap: () {
-                      toggleFavorite(data.id);
+                      toggleFavorite(data);
                     },
                     name: data.name,
                     onTap: () async {
@@ -164,7 +188,6 @@ class _HomePageState extends State<HomePage> {
                         arguments: data,
                       );
                       favorites = List<String>.from(box.read('favorites'));
-                      print(favorites);
                       setState(() {});
                     },
                   );
