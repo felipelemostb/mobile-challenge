@@ -6,7 +6,7 @@ import 'package:mobile_challenge/core/themes/app_styles.dart';
 import 'package:mobile_challenge/core/themes/app_theme.dart';
 import 'package:mobile_challenge/data/model/docs_model.dart';
 import 'package:mobile_challenge/domain/bloc/bloc_restaurant.dart';
-import 'package:mobile_challenge/presentation/components/app_header.dart';
+import 'package:mobile_challenge/presentation/pages/home_page/widgets/app_header_home.dart';
 import 'package:mobile_challenge/presentation/pages/home_page/widgets/restaurant_card_widget.dart';
 import 'package:mobile_challenge/presentation/pages/home_page/widgets/search_component.dart';
 
@@ -67,18 +67,14 @@ class _HomePageState extends State<HomePage> {
           return element['_id'] == doc.id;
         }),
       );
-
-      favoritesJson;
       box.write('favorites', favorites);
       box.write('favoritesJson', favoritesJson);
     } else {
       favorites.add(doc.id);
       favoritesJson.add(doc.toMap());
-      favoritesJson;
       box.write('favorites', favorites);
       box.write('favoritesJson', favoritesJson);
     }
-
     setState(() {});
   }
 
@@ -115,7 +111,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     num screenPerimeter = DeviceScreenInformation.perimeter(context);
-    return AppHeader(
+    return AppHeaderHome(
       child: SafeArea(
         child: SingleChildScrollView(
           controller: scrollController,
