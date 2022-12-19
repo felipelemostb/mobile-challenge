@@ -23,9 +23,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   late RestaurantController _blocRestaurantPage;
   List<DocsModel> docs = [];
+
   int offset = 0;
   ScrollController scrollController = ScrollController();
   final box = GetStorage();
+  TextEditingController controller = TextEditingController();
 
   @override
   void initState() {
@@ -38,8 +40,8 @@ class _HomePageState extends State<HomePage> {
   void didChangeDependencies() async {
     await getRestaurants();
     scrollController.addListener(infinityScroll);
-    favorites = List<String>.from(box.read('favorites'));
-
+    favorites = List<String>.from(box.read('favorites') ?? []);
+    favoritesJson = List<Map>.from(box.read('favoritesJson') ?? []);
     super.didChangeDependencies();
   }
 
@@ -60,12 +62,19 @@ class _HomePageState extends State<HomePage> {
         favorites.where((element) => element == doc.id).isNotEmpty;
     if (containsid) {
       favorites.remove(doc.id);
-      favoritesJson.remove(doc.toMap());
+      favoritesJson.removeWhere(
+        ((element) {
+          return element['_id'] == doc.id;
+        }),
+      );
+
+      favoritesJson;
       box.write('favorites', favorites);
       box.write('favoritesJson', favoritesJson);
     } else {
       favorites.add(doc.id);
       favoritesJson.add(doc.toMap());
+      favoritesJson;
       box.write('favorites', favorites);
       box.write('favoritesJson', favoritesJson);
     }
@@ -86,11 +95,21 @@ class _HomePageState extends State<HomePage> {
       final response = await _blocRestaurantPage.fetchDocs(offset);
       setState(() {
         docs.addAll(response);
+
         offset += 3;
       });
     } catch (e) {
       rethrow;
     }
+  }
+
+  List<DocsModel> search() {
+    final result = docs.where((id) {
+      final bookTitle = id.name.toLowerCase();
+      final input = controller.text.toLowerCase();
+      return bookTitle.contains(input);
+    }).toList();
+    return result;
   }
 
   @override
@@ -144,7 +163,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.05),
-              const SearchComponent(),
+              SearchComponent(
+                onChanged: (value) {},
+                controller: controller,
+              ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -167,9 +189,9 @@ class _HomePageState extends State<HomePage> {
               ListView.builder(
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: docs.length,
+                itemCount: search().length,
                 itemBuilder: (context, index) {
-                  final data = docs[index];
+                  final data = search()[index];
                   final isSelected = favorites.where(
                     (element) {
                       return element == data.id;
@@ -187,7 +209,8 @@ class _HomePageState extends State<HomePage> {
                         "/detailsPage",
                         arguments: data,
                       );
-                      favorites = List<String>.from(box.read('favorites'));
+                      favorites =
+                          List<String>.from(box.read('favorites') ?? []);
                       setState(() {});
                     },
                   );

@@ -3,7 +3,12 @@ import 'package:mobile_challenge/core/responsiveness/device_screen_information.d
 import 'package:mobile_challenge/core/themes/app_theme.dart';
 
 class SearchComponent extends StatefulWidget {
-  const SearchComponent({Key? key}) : super(key: key);
+  const SearchComponent(
+      {Key? key, required this.onChanged, required this.controller})
+      : super(key: key);
+
+  final Function(String) onChanged;
+  final TextEditingController controller;
 
   @override
   State<SearchComponent> createState() => _SearchComponentState();
@@ -20,6 +25,8 @@ class _SearchComponentState extends State<SearchComponent> {
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.10,
         child: TextField(
+          controller: widget.controller,
+          onChanged: widget.onChanged,
           decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(
