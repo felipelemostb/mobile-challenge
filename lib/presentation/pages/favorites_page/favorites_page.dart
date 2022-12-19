@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:lottie/lottie.dart';
 import 'package:mobile_challenge/core/responsiveness/device_screen_information.dart';
 import 'package:mobile_challenge/core/themes/app_styles.dart';
 import 'package:mobile_challenge/core/themes/app_theme.dart';
 import 'package:mobile_challenge/data/model/docs_model.dart';
-import 'package:mobile_challenge/presentation/components/app_header.dart';
+import 'package:mobile_challenge/presentation/pages/favorites_page/widgets/app_header_favorites.dart';
 
 class FavoritesPage extends StatefulWidget {
   const FavoritesPage({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   @override
   Widget build(BuildContext context) {
     num screenPerimeter = DeviceScreenInformation.perimeter(context);
-    return AppHeader(
+    return AppHeaderFavorites(
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -98,47 +99,67 @@ class _FavoritesPageState extends State<FavoritesPage> {
                 ],
               ),
             ),
-            ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              shrinkWrap: true,
-              itemCount: favorites.length,
-              itemBuilder: (context, index) {
-                final data = favorites[index];
-                return Column(
-                  children: [
-                    const SizedBox(height: 30),
-                    Padding(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: MediaQuery.of(context).size.width * 0.08,
+            favorites.isEmpty
+                ? Column(
+                    children: [
+                      Lottie.asset(
+                        AppTheme.animations.empty,
+                        height: screenPerimeter * 0.10,
                       ),
-                      child: Row(
+                      Text(
+                        textAlign: TextAlign.center,
+                        'Oh no! You favorite list is empty \nlets find new amazing places!',
+                        style: AppTheme.textStyles.styleText(
+                          TypeFont.light,
+                          AppTheme.colors.black,
+                          screenPerimeter * 0.008,
+                          FontWeight.w500,
+                        ),
+                      )
+                    ],
+                  )
+                : ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: favorites.length,
+                    itemBuilder: (context, index) {
+                      final data = favorites[index];
+                      return Column(
                         children: [
-                          CircleAvatar(
-                            radius: screenPerimeter * 0.008,
-                            backgroundColor: AppTheme.colors.primaryColor,
-                            child: Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                              size: screenPerimeter * 0.008,
+                          const SizedBox(height: 30),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal:
+                                  MediaQuery.of(context).size.width * 0.08,
+                            ),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: screenPerimeter * 0.008,
+                                  backgroundColor: AppTheme.colors.primaryColor,
+                                  child: Icon(
+                                    Icons.favorite,
+                                    color: Colors.red,
+                                    size: screenPerimeter * 0.008,
+                                  ),
+                                ),
+                                const SizedBox(width: 10),
+                                Text(
+                                  data.name,
+                                  style: AppTheme.textStyles.styleText(
+                                    TypeFont.normal,
+                                    AppTheme.colors.black,
+                                    screenPerimeter * 0.008,
+                                    FontWeight.w700,
+                                  ),
+                                )
+                              ],
                             ),
                           ),
-                          const SizedBox(width: 10),
-                          Text(
-                            data.name,
-                            style: AppTheme.textStyles.styleText(
-                              TypeFont.normal,
-                              AppTheme.colors.black,
-                              screenPerimeter * 0.008,
-                              FontWeight.w700,
-                            ),
-                          )
                         ],
-                      ),
-                    ),
-                  ],
-                );
-              },
-            ),
+                      );
+                    },
+                  ),
           ],
         ),
       ),
