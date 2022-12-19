@@ -4,6 +4,4 @@ abstract class IClientHttp {
   Future<dynamic> get(RequestDataUtils requestDataUtils);
   Future<dynamic> post(RequestDataUtils requestDataUtils);
   Future<dynamic> put(RequestDataUtils requestDataUtils);
-  Future<dynamic> delete(RequestDataUtils requestDataUtils);
-  Future<dynamic> patch(RequestDataUtils requestDataUtils);
 }

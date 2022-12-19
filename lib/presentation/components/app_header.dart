@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mobile_challenge/core/responsiveness/device_screen_information.dart';
 import 'package:mobile_challenge/core/themes/app_styles.dart';
 import 'package:mobile_challenge/core/themes/app_theme.dart';
+import 'package:mobile_challenge/presentation/components/bottom_navigation.dart';
 import 'package:mobile_challenge/presentation/routes/app_navigator.dart';
 
 class AppHeader extends StatelessWidget {
@@ -132,13 +133,16 @@ class AppHeader extends StatelessWidget {
           child: icon ??
               Icon(
                 Icons.arrow_back_outlined,
-                color: AppTheme.colors.white,
+                color: AppTheme.colors.primaryColor,
                 size: screenPerimeter * 0.010,
               ),
         ),
         backgroundColor: Colors.transparent,
       ),
       body: child,
+      bottomNavigationBar: const BottomNavigation(
+        index: 0,
+      ),
     );
   }
 }

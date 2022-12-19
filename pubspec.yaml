@@ -13,6 +13,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_lints: ^2.0.0
+  dio: ^4.0.6
+  sqflite: ^2.2.2
+  lottie: ^2.1.0
+  loading_animation_widget: ^1.2.0+4
+  flutter_secure_storage: ^4.2.1
+  http: ^0.13.5
+  get_storage: ^2.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -23,12 +31,6 @@ dev_dependencies:
     sdk: flutter
 
 
-  flutter_lints: ^2.0.0
-  dio: ^4.0.6
-  sqflite: ^2.2.2
-  lottie: ^2.1.0
-  loading_animation_widget: ^1.2.0+4
-  flutter_secure_storage: ^4.2.1
 
 flutter:
 
@@ -38,6 +40,7 @@ flutter:
   assets:
     - assets/images/
     - assets/animations/
+    - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -57,7 +60,7 @@ flutter:
 
     - family: CocoLight
       fonts:
-        - asset: assets/fonts/CocoGothic-Light_trial.ttf
+        - asset: assets/fonts/CocoGothic_Light_trial.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

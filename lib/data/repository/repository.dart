@@ -22,24 +22,6 @@ class Repository extends IClientHttp with ILocalDataSource {
       );
 
   @override
-  Future delete(RequestDataUtils requestDataUtils) async {
-    try {
-      return await _clientHttp.delete(requestDataUtils);
-    } on HttpExceptions catch (e) {
-      if (e.statusCode == 401) {
-        try {
-          final response = await _clientHttp.delete(requestDataUtils);
-          return response;
-        } catch (e) {
-          rethrow;
-        }
-      } else {
-        rethrow;
-      }
-    }
-  }
-
-  @override
   Future get(RequestDataUtils requestDataUtils) async {
     try {
       return await _clientHttp.get(requestDataUtils);
@@ -47,24 +29,6 @@ class Repository extends IClientHttp with ILocalDataSource {
       if (e.statusCode == 401) {
         try {
           final response = await _clientHttp.get(requestDataUtils);
-          return response;
-        } catch (e) {
-          rethrow;
-        }
-      } else {
-        rethrow;
-      }
-    }
-  }
-
-  @override
-  Future patch(RequestDataUtils requestDataUtils) async {
-    try {
-      return await _clientHttp.patch(requestDataUtils);
-    } on HttpExceptions catch (e) {
-      if (e.statusCode == 401) {
-        try {
-          final response = await _clientHttp.patch(requestDataUtils);
           return response;
         } catch (e) {
           rethrow;

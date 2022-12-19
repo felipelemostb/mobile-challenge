@@ -8,7 +8,7 @@ import 'dart:convert';
 class ZonesModel {
   String id;
   int maxDistanceRadius;
-  int deliveryCost;
+  num deliveryCost;
   int avgDeliveryTimeMinutes;
 
   ZonesModel({
