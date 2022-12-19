@@ -104,7 +104,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                     children: [
                       Lottie.asset(
                         AppTheme.animations.empty,
-                        height: screenPerimeter * 0.10,
+                        height: screenPerimeter * 0.11,
                       ),
                       Text(
                         textAlign: TextAlign.center,
