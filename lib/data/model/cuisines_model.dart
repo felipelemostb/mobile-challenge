@@ -30,8 +30,6 @@ class CuisinesModel {
     );
   }
 
-  String toJson() => json.encode(toMap());
-
   factory CuisinesModel.fromJson(String source) =>
       CuisinesModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

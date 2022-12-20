@@ -63,6 +63,7 @@ class DocsModel {
   });
 
   Map<String, dynamic> toMap() {
+    print(cuisines.map((e) => e.toMap()));
     return {
       "subscriptions": subscriptions.toMap(),
       "services": service.toMap(),
@@ -71,7 +72,7 @@ class DocsModel {
       "contacts": contacts.toMap(),
       "location": location.toMap(),
       "Image": image.toMap(),
-      "cuisines": cuisines.map((e) => e.toMap()),
+      "cuisines": cuisines.map((e) => e.toMap()).toList(),
       "additionalInfo": additionalInfo,
       "_id": id,
       "name": name,
